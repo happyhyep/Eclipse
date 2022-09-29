@@ -9,6 +9,7 @@
     "98.css": "^0.1.18",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
@@ -40,6 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ],
-    "proxy": "http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080"
+    "proxy": {
+      "/api": {
+        "target": "http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080"
+      }
+    }
   }
 }

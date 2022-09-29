@@ -3,13 +3,13 @@ import axios from 'axios';
 
 // export const getTest = () => getAxios('/test');
 
-// export function getTest() {
-//     axios.get('/test')
-//   }
+export function getTest() {
+    axios.get('/')
+  }
 
 //   export function getTest() {
 //     axios.get('/test')
-//          .then(data => {
-//            console.log(data.data)
+//          .then(res => {
+//            console.log(res.data)
 //          })
 //   }

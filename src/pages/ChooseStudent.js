@@ -3,19 +3,25 @@ import { SearchBox } from '../components/Common/SearchBox';
 import StudentsProfile from '../components/Student/StudentsProfile';
 import styled from 'styled-components';
 import { tempUser } from '../store/temp/tempUserData';
+import { getTest } from '../store/axiosTest';
+import axios from 'axios';
 
 const ChooseStudent = () => {
     const [allUserList, setAllUserList] = useState(tempUser);
     const [searchUserList, setSearchedUserList] = useState([]);
     const [searchText, setSearchText] = useState('');
 
-    // 모든 유저 정보 API Call
-    // useEffect(() => {
-    //     fetchAllUserList().then((res) => {
-    //         setAllUserList(res.data.content);
-    //     });
-    // }, []);
-
+    const [users, setUsers] = useState([]);
+    const request = axios.get('/test/');
+    useEffect(() => {
+        axios.get('/test/')
+            .then(response => {
+                setUsers(response.data);
+            });
+    }, []);
+    console.log(users);
+    console.log(request);
+    
     useEffect(() => {
         // @ts-ignore
 
