@@ -1,14 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import MainBeforeLogin from '../components/Main/MainBeforeLogin';
+
 
 const Main = () => {
 
     return (
-      <div>
-        <p>사이트에 온 걸 환영해!</p>
-      </div>
+      <>
+        <MainBeforeLogin></MainBeforeLogin>
+      </>
     );
+};
+
+Main.propsTypes = {
+    isLoggedIn: PropTypes.bool,
+    setIsLoggedIn: PropTypes.func,
+    userObj: PropTypes.bool
 };
 
 export default Main;
