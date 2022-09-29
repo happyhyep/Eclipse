@@ -7,6 +7,7 @@ import routes from './components/Common/Routes';
 import Main from './pages/Main';
 import MainBeforeLogin from './components/Main/MainBeforeLogin';
 import MainAfterLogin from './components/Main/MainAfterLogin';
+import ChooseStudent from './pages/ChooseStudent';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false); 
@@ -39,7 +40,7 @@ function App() {
                 </Routes>
             </BaseLayout>
 
-            <MainAfterLogin></MainAfterLogin>
+            <ChooseStudent></ChooseStudent>
         </AuthContext.Provider>
       </div>
     );
