@@ -3,11 +3,12 @@ import img1 from '../../Layout/img/person.png';
 import { Box } from '../Styled/Box';
 import khu from '../../Layout/img/khu.png';
 import styled from 'styled-components';
+import { PageDiv } from '../../pages/ChooseStudent';
 
 const MainBeforeLogin = () => {
       
     return (
-        <div style={{}}>
+        <PageDiv>
             <Container></Container>   
             <div style={{ height: '80%', color: '#ffc83d', display: 'flex', fontSize: '30px'}}>
                 <img src={img1} width="300px"/>          
@@ -21,7 +22,7 @@ const MainBeforeLogin = () => {
                 </Box>  
             </div>     
   
-        </div>
+        </PageDiv>
     );
 };
 

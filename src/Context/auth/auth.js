@@ -6,6 +6,7 @@ export const AuthContext = createContext({
         id: null,
         email: null,
         name: null,
+        profileImage: null,
         nickname: null,
         department: null,
         department_score: null,

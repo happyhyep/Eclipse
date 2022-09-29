@@ -3,13 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Box } from '../Styled/Box';
 import { getTest } from '../../store/axiosTest';
+import { PageDiv } from '../../pages/ChooseStudent';
 
 const MainPage = () => {
     const [editMode, setEditMode] = useState(false);
 
 
     return (
-        <div>
+        <PageDiv>
             <h1>
                 <a style={{ color: 'white', fontSize: 'min(6vw, 40px)' }}>
                     대충 배경
@@ -36,7 +37,7 @@ const MainPage = () => {
                 </div>
                 </Box>
             </div>
-        </div>
+        </PageDiv>
     );
 };
 

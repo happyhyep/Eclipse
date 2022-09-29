@@ -11,16 +11,16 @@ const ChooseStudent = () => {
     const [searchUserList, setSearchedUserList] = useState([]);
     const [searchText, setSearchText] = useState('');
 
-    const [users, setUsers] = useState([]);
-    const request = axios.get('/test/');
-    useEffect(() => {
-        axios.get('/test/')
-            .then(response => {
-                setUsers(response.data);
-            });
-    }, []);
-    console.log(users);
-    console.log(request);
+    // const [users, setUsers] = useState([]);
+    // const request = axios.get('/test/');
+    // useEffect(() => {
+    //     axios.get('/test/')
+    //         .then(response => {
+    //             setUsers(response.data);
+    //         });
+    // }, []);
+    // console.log(users);
+    // console.log(request);
     
     useEffect(() => {
         // @ts-ignore
@@ -53,7 +53,7 @@ const ChooseStudent = () => {
     };
 
     return (
-        <div>
+        <PageDiv>
             <SearchBox
                 placeholder={'친구의 닉네임을 입력하세요'}
                 onKeyPress={onPressEnter}
@@ -69,8 +69,15 @@ const ChooseStudent = () => {
                         ))}
                 </div>
             )}
-        </div>
+        </PageDiv>
     );
 };
 
 export default ChooseStudent;
+
+export const PageDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+`;

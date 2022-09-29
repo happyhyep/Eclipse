@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { UserBox} from '../../components/Styled/UserBox';
+import UserProfileModal from '../UserProfileModal';
 
 function FriendsProfile({ user }) {
-    const { profileImage, nickname } = user;
+    const { profileImage, nickname, department } = user;
     const [isRequest, setIsRequest] = useState(false);
     const theme = useTheme();
 
@@ -19,6 +20,15 @@ function FriendsProfile({ user }) {
         
     };
 
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const openModal = (targetUserId) => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
     return (
         <UserBox theme={theme} width="200px" height="240px">
             <div style={{ height: '130px', maxHeight: '130px' }}>
@@ -27,13 +37,22 @@ function FriendsProfile({ user }) {
                 )}
             </div>
             <p>{nickname}</p>
+            <p>{department}</p>
+            <button
+                    onClick={() => {
+                        openModal(user.id);
+                    }}
+                    style={{ fontSize: '10px' }}
+                >
+                    프로필 보기
+                </button>
             {!isRequest ? (
                 <button
                     onClick={() => {
                         onRequestHandler();
                     }}
                 >
-                    💌 친구요청하기
+                    💌 대학원 섭외하기
                 </button>
             ) : (
                 <button
@@ -41,9 +60,15 @@ function FriendsProfile({ user }) {
                         onCancelHandler();
                     }}
                 >
-                    ❌ 요청취소하기
+                    ❌ 섭외 취소하기
                 </button>
             )}
+                <UserProfileModal
+                    open={modalOpen}
+                    close={closeModal}
+                    header={user.nickname}
+                >
+                </UserProfileModal>
         </UserBox>
     );
 }
