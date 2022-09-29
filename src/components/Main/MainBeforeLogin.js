@@ -14,11 +14,9 @@ const MainBeforeLogin = () => {
                 <img src={img1} width="300px"/>          
             </div> 
             <div style={{position: 'fixed', bottom:'0', width: '100%'}}>
-                <Box>
+                <Box style={{height: '200px', fontSize: '30px'}}>
                     로그인 후 서비스를 이용해봐!
-                <a >
-                    <button>인포21로 로그인하기</button>
-                </a>
+                    <button style={{fontSize: '20px'}}>인포21로 로그인하기</button>
                 </Box>  
             </div>     
   

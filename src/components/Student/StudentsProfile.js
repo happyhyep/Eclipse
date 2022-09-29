@@ -4,7 +4,7 @@ import { UserBox} from '../../components/Styled/UserBox';
 import UserProfileModal from '../UserProfileModal';
 
 function FriendsProfile({ user }) {
-    const { profileImage, nickname, department } = user;
+    const { profileImage, nickname, department, department_score } = user;
     const [isRequest, setIsRequest] = useState(false);
     const theme = useTheme();
 
@@ -30,19 +30,22 @@ function FriendsProfile({ user }) {
     };
 
     return (
-        <UserBox theme={theme} width="200px" height="240px">
+        <UserBox theme={theme} width="200px" height="260px">
             <div style={{ height: '130px', maxHeight: '130px' }}>
                 {profileImage && (
-                    <div style={{marginTop: '35%' }}><img src={profileImage} width="100px" height="100px" /></div>
+                    <div style={{marginTop: '35%' }}><img src={profileImage} width="80px" height="80px" /></div>
                 )}
             </div>
-            <p>{nickname}</p>
-            <p>{department}</p>
+            <div style={{textAlign: 'center'}}>
+            <p style={{fontSize: '15px', marginBottom: '1px'}}>{nickname}</p>
+            <p style={{fontSize: '12px', marginBottom: '0.5px'}}>{department}</p>
+            <p style={{fontSize: '12px', marginTop: '0.5px'}}>전공 평점 : {department_score}</p>
+            </div>
             <button
                     onClick={() => {
                         openModal(user.id);
                     }}
-                    style={{ fontSize: '10px' }}
+                    style={{ fontSize: '10px', color: 'black' }}
                 >
                     프로필 보기
                 </button>
@@ -51,6 +54,7 @@ function FriendsProfile({ user }) {
                     onClick={() => {
                         onRequestHandler();
                     }}
+                    style={{ marginTop: '10px', fontSize: '15px', color: 'black' }}
                 >
                     💌 대학원 섭외하기
                 </button>
@@ -59,6 +63,7 @@ function FriendsProfile({ user }) {
                     onClick={() => {
                         onCancelHandler();
                     }}
+                    style={{ marginTop: '10px', fontSize: '15px', color: 'black' }}
                 >
                     ❌ 섭외 취소하기
                 </button>

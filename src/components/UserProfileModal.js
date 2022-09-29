@@ -8,8 +8,9 @@ import {
     UserProfileModalOpenModal,
 } from './Styled/Modal';
 
-const UserProfileModal = (props) => {
+const UserProfileModal = (props, { user }) => {
     const { open, close, header } = props;
+    
 
     return (
         <div
