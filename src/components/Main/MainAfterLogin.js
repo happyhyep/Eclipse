@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import { Box } from '../Styled/Box';
-
+import { getTest } from '../../store/axiosTest';
 
 const MainPage = () => {
     const [editMode, setEditMode] = useState(false);
-
-
 
 
     return (
