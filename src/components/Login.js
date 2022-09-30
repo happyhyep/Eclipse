@@ -2,32 +2,35 @@ import { useState } from "react";
 import { PageDiv } from "../pages/Recruit";
 import axios from 'axios';
 import login from '../store/loginAxios'
+import { Form } from "react-router-dom";
+import { useAuth } from "../Context/auth/auth";
 
 
 const Login = () => {
     const [loginId, setLoginId] = useState(''); 
     const [loginPw, setLoginPw] = useState('');
+    const [loginUser, setLoginUser] = useState('');
     
     const onPressEnter = (e) => {
         if (e.key == 'Enter') {
             onSubmit();
         }
     };
+    const auth = getAuth();
 
     const onSubmit = (e) => {
-             e.preventDefault();          
-             axios.post("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/login", {
-                userid: loginId,
-                password: loginPw
-             })
+             e.preventDefault();  
+             const formData = new FormData();
+             formData.append("userid", loginId);
+             formData.append("password",loginPw);        
+             axios.post("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/login", formData)
              .then(function (response) {
                 console.log('로그인');
                 console.log(response.data);
+                setLoginUser(response.data);
+                const user = loginUser;
                 }
              )
-             console.log(loginId);
-             console.log(loginPw);
-             alert('로그인 완료');
             setLoginId('');
             setLoginPw('');
     };
