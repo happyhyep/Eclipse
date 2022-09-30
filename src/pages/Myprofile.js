@@ -44,7 +44,8 @@ function MyProfile() {
         width: "100%",
       }}
     >
-      <h1>
+      <div>
+        <div>
         <a
           style={{
             color: "black",
@@ -54,14 +55,23 @@ function MyProfile() {
           }}
         >
           {user.nickname}
-        </a>
-      </h1>
+        </a></div>
+        <div><a style={{
+            color: "black",
+            fontSize: "min(6vw, 40px)",
+            fontFamily: "Neo",
+            fontSize: "20px",
+        }}>{user.name}</a>
+      </div></div>
       <p>
-        <UserBox width="300px">
-          {department} {student_id}학번 / {department_score} (전공학점)
-        </UserBox>
+      <div style={{width: '500px', height: '50px', fontSize: "15px", fontFamily: "Neo", alignItems: 'center', textAlign: 'center', display: "flex", justifyContent:'center'}}>
+          <div style={{display: 'flow'}}>
+          <div>{department} {student_id}학번</div>
+          <div>{department_score} (전공학점)</div>
+          </div>
+        </div>
       </p>
-
+      <fieldset style={{ fontSize: "15px", fontFamily: "Neo", alignItems: 'center', textAlign: 'center', display: "flex", justifyContent:'center'}}>
       <div>
         <div
           style={{
@@ -90,19 +100,19 @@ function MyProfile() {
           >
             나를 소개해요(자기소개, 관심분야, 수상경력, 배우고 싶은 분야 등){" "}
             {"  "}
-            <div style={{ display: "flex" }}>
-              <TextareaInput
-                name="etc"
-                type="text"
+            <div style={{ marginTop:'20px', display: "flex" }}>
+                <textarea
+                id="text100"
+                rows="10"
                 value={inputs.etc}
                 onChange={onChange}
-                width="100%"
-              ></TextareaInput>
+                style={{width: "450px"}}></textarea>         
               <button onClick={onClick}>수정하기</button>
             </div>
           </div>
         </div>
       </div>
+      </fieldset>
     </PageDiv>
   );
 }
