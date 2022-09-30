@@ -3,6 +3,7 @@ import Main from '../../pages/Main';
 import Recruit from '../../pages/Recruit';
 import Timetable from '../../pages/Timetable';
 import Give from '../../pages/Give';
+import Login from '../../pages/Login';
 
 
 const routes = [
@@ -26,6 +27,12 @@ const routes = [
         path: '/giveit',
         component: Give,
     },
+    {
+        id: 'login',
+        path: '/login',
+        component: Login,
+    },
+
 
 
 ];

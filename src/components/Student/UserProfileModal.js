@@ -1,12 +1,13 @@
 import React from 'react';
+import { Form } from 'react-router-dom';
 import {
     UserProfileModalHeaderButton,
     UserProfileModalFooter,
     UserProfileModalHeader,
     UserProfileModalMain,
     UserProfileModalSection,
-    UserProfileModalOpenModal,
-} from './Styled/Modal';
+    UserProfileModalOpenModal,}
+    from '../Styled/Modal';
 
 const UserProfileModal = (props, { user }) => {
     const { open, close, header } = props;
