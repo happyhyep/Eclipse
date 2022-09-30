@@ -6,8 +6,10 @@ import styled from "styled-components";
 import { PageDiv } from "../../pages/Recruit";
 import { useAuth } from "../../Context/auth/auth";
 import AlarmModal from "../Common/AlarmModal";
+import { AlarmList } from "../../store/temp/tempAlarmData";
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
+  const [alarm, setAlarm] = useState(AlarmList);
 
   const auth = useAuth();
   const { user } = auth.auth;
@@ -39,8 +41,12 @@ const MainPage = () => {
             {auth.auth.Nick_Name}님의 프로필
           </div>
           <div style={{ fontSize: "15px" }}> {auth.auth.Hakgwa}</div>
-          <div style={{ fontSize: "15px" }}>전공 학점 평균 :  {auth.auth.score} / 4.3</div>
-          <div style={{ fontSize: "13px" }}>자기소개 : 안녕하세요 적당히 바람이 시원해 기분이 너무 좋아요 유후!</div>
+          <div style={{ fontSize: "15px" }}>
+            전공 학점 평균 : {auth.auth.score} / 4.3
+          </div>
+          <div style={{ fontSize: "13px" }}>
+            자기소개 : 안녕하세요 적당히 바람이 시원해 기분이 너무 좋아요 유후!
+          </div>
           <div style={{ fontSize: "13px" }}></div>
         </Box>
       </div>
@@ -65,7 +71,7 @@ const MainPage = () => {
                     borderRadius: "6px",
                     fontFamily: "Neo",
                     marginBottom: "8px",
-                    marginTop: '10px'
+                    marginTop: "10px",
                   }}
                 >
                   1. 📅 시간표 추천
@@ -135,6 +141,7 @@ const MainPage = () => {
               <AlarmModal
                 modalOpen={modalOpen}
                 setModalOpen={setModalOpen}
+                alarm={alarm}
               ></AlarmModal>
             </div>
           </div>
