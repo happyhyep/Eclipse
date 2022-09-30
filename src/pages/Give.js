@@ -4,7 +4,7 @@ import StudentsProfile from "../components/Student/StudentsProfile";
 import styled from "styled-components";
 import { tempUser } from "../store/temp/tempUserData";
 import { getTest } from "../store/axiosTest";
-import RecruitProfile from "../components/Common/RecruitProfile";
+import GiveProfile from "../components/Common/GiveProfile";
 
 const axios = require("axios");
 const Recruit = () => {
@@ -63,7 +63,7 @@ const Recruit = () => {
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {searchUserList &&
             searchUserList.map((user) => (
-              <RecruitProfile key={user.id} user={user} />
+              <GiveProfile key={user.id} user={user} />
             ))}
         </div>
       )}

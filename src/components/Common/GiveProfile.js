@@ -4,7 +4,7 @@ import { UserBox } from "../Styled/UserBox";
 import UserProfileModal from "../Student/UserProfileModal";
 import Pbuttons from "../professor/Pbuttons";
 import { useAuth } from "../../Context/auth/auth";
-import RecruitButton from "../Common/RecruitButton";
+import RecruitButton from "./RecruitButton";
 function RecruitProfile({ user }) {
   const {
     profileImage,

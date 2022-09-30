@@ -16,6 +16,7 @@ export const AuthContext = createContext({
     all_score: [],
     etc: null,
     award: null,
+    money: null,
   },
   setIsLoggedIn: () => {},
   setUser: () => {},

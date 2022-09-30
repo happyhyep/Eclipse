@@ -12,6 +12,7 @@ import Login from "./pages/LoginPage";
 import LoginPage from "./pages/LoginPage";
 import Myprofile from "./pages/Myprofile";
 import { tempUser } from "./store/temp/tempUserData";
+import Payment from "./pages/Payment";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -45,6 +46,7 @@ function App() {
             <Route key="giveit" path="/give" element={<Give />} />
             <Route key="login" path="/login" element={<LoginPage />} />
             <Route key="myprofile" path="/myprofile" element={<Myprofile />} />
+            <Route key="payment" path="/payment" element={<Payment />} />
           </Routes>
         </Router>
       </AuthContext.Provider>

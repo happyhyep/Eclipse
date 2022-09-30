@@ -17,6 +17,7 @@ export const tempUser = [
     department_score: "4.3",
     all_score: [],
     etc: "인공지능에 관심이 생겼어요.... 더 배우고 싶어요....  조언부탁드립니다",
+    money: "10000",
   },
   {
     id: 2,

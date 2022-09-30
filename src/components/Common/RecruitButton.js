@@ -1,11 +1,12 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const RecruitButton = () => {
   //const [isRequest, setIsRequest] = useState(false);
   const onRequestHandler = async (targetUserId) => {
     //alert(`❗친구요청실패❗${e}`); //주석지우기 (8/23)
     //setIsRequest(true);
-    alert("후원완료"); // 지우기 (8/23)
+    // 지우기 (8/23)
+    alert("후원 완료! 10000원이 차감됩니다");
   };
 
   return (
