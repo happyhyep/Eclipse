@@ -17,6 +17,7 @@ export const AuthContext = createContext({
     etc: null,
     award: null,
     money: null,
+    alarm: null,
   },
   setIsLoggedIn: () => {},
   setUser: () => {},

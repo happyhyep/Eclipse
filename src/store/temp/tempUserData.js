@@ -18,6 +18,7 @@ export const tempUser = [
     all_score: [],
     etc: "인공지능에 관심이 생겼어요.... 더 배우고 싶어요....  조언부탁드립니다",
     money: "10000",
+    alarm: [{ from: "이혜미 교수", message: "상담요청" }],
   },
   {
     id: 2,
