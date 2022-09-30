@@ -36,8 +36,8 @@ function App() {
           isProfessor,
         }}
       >
-        <BaseLayout></BaseLayout>
         <Router>
+          <BaseLayout></BaseLayout>
           <Routes>
             <Route key="main" path="/" element={<Main />} />
             <Route key="timetable" path="/timetable" element={<Timetable />} />
