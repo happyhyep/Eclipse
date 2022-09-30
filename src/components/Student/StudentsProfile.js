@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styled, { useTheme } from 'styled-components';
-import { UserBox} from '../../components/Styled/UserBox';
-import UserProfileModal from '../UserProfileModal';
+import { UserBox} from '../Styled/UserBox';
+import UserProfileModal from './UserProfileModal';
 
 function FriendsProfile({ user }) {
     const { profileImage, nickname, department, department_score, student_id } = user;
