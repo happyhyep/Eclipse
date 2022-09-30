@@ -14,6 +14,6 @@ export const tempProfessorData = [
     all_score: [],
     etc: "",
     money: "10000",
-    alarm: "",
+    alarm: [],
   },
 ];

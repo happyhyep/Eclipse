@@ -34,7 +34,7 @@ const AlarmModal = (props) => {
             </UserProfileModalHeaderButton>
           </UserProfileModalHeader>
           <AlarmModalMain>
-            {alarm.map((it, idx) => (
+            {alarm?.map((it, idx) => (
               <AlarmList key={idx} alarm={it} />
             ))}
           </AlarmModalMain>
