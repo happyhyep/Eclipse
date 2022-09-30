@@ -11,7 +11,7 @@ function MyProfile() {
   const auth = useAuth();
   const { user } = auth;
   const [inputs, setInputs] = useState({
-    etc: "",
+    etc: user?.etc,
   });
   const onChange = (e) => {
     if (e.target.name === "etc") {
@@ -30,6 +30,7 @@ function MyProfile() {
     all_score,
     student_id,
     award,
+    etc,
   } = user;
   const onClick = () => {
     alert("수정완료");
