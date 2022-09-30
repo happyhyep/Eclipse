@@ -7,7 +7,7 @@ const Background = () => {
     return (
         <div className="window" style={{width: "100%"}}>
             <div className="window-body" style={{height: "100%"}}>
-            <p>There's so much room for activities!</p>
+            <p>There</p>
             </div>
         </div>  
     )
