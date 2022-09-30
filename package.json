@@ -40,11 +40,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
-    "proxy": {
-      "/api": {
-        "target": "http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080"
-      }
-    }
+    ]
   }
 }
