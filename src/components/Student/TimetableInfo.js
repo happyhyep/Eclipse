@@ -20,7 +20,13 @@ const TimetableInfo = () => {
     <div>
       <PageDiv>
         <h1>
-          <a style={{ color: "white", fontSize: "min(6vw, 40px)" }}>
+          <a
+            style={{
+              color: "black",
+              fontSize: "min(6vw, 40px)",
+              fontFamily: "neo",
+            }}
+          >
             시간표 들여다보기
           </a>
         </h1>

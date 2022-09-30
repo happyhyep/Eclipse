@@ -14,8 +14,14 @@ const Timetable = () => {
     <>
       <PageDiv>
         <h1>
-          <a style={{ color: "white", fontSize: "min(6vw, 40px)" }}>
-            원하는 시간표 찾기
+          <a
+            style={{
+              color: "black",
+              fontSize: "min(6vw, 30px)",
+              fontFamily: "neo",
+            }}
+          >
+            어떤 과목을 들을까?
           </a>
         </h1>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
