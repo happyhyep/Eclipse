@@ -16,7 +16,7 @@ import { tempUser } from "./store/temp/tempUserData";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isStudent, setIsStudent] = useState(true);
-  const [isProfessor, setIsProfessor] = useState(false);
+  const [isProfessor, setIsProfessor] = useState(true);
   const [user, setUser] = useState(tempUser[0]); // null
 
   // useEffect(() => {

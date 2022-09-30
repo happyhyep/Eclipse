@@ -4,7 +4,6 @@ import { UserBox } from "../Styled/UserBox";
 import UserProfileModal from "./UserProfileModal";
 import Pbuttons from "../professor/Pbuttons";
 import { useAuth } from "../../Context/auth/auth";
-import RecruitButton from "../Common/RecruitButton";
 function FriendsProfile({ user }) {
   const {
     profileImage,
@@ -42,6 +41,9 @@ function FriendsProfile({ user }) {
         <p style={{ fontSize: "12px", marginBottom: "1px", fontFamily: "Neo" }}>
           {department} {student_id}학번
         </p>
+        <p style={{ fontSize: "12px", marginBottom: "1px", fontFamily: "Neo" }}>
+          {etc}
+        </p>
       </div>
       <button
         onClick={() => {
@@ -57,7 +59,6 @@ function FriendsProfile({ user }) {
       >
         프로필 보기
       </button>
-
       {auth?.isProfessor && <Pbuttons />}
 
       <UserProfileModal
