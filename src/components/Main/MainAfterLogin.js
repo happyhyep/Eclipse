@@ -9,8 +9,6 @@ import AlarmModal from "../Common/AlarmModal";
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
 
-
-
   const auth = useAuth();
   const { user } = auth;
   const [modalOpen, setModalOpen] = useState(null);
@@ -36,7 +34,6 @@ const MainPage = () => {
           }}
         >
           <h style={{ fontSize: "25px" }}>{user.nickname} 님의 프로필</h>
-
         </Box>
       </div>
       <div
@@ -129,8 +126,8 @@ const MainPage = () => {
               <AlarmModal
                 modalOpen={modalOpen}
                 setModalOpen={setModalOpen}
-                header={`📰 ${user.alarm.length}개의 알람`}
-                alarm={user.alarm}
+                header={`📰 ${user?.alarm.length}개의 알람`}
+                alarm={user?.alarm}
               ></AlarmModal>
             </div>
           </div>
