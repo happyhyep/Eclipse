@@ -9,7 +9,7 @@ const TopMenu = () => {
         <div>
           <Link to={"/"}>
             <div className="title-bar-text" style={{ fontSize: "20px" }}>
-              2022 Khuthon
+              {'  '}Eclipse
             </div>
           </Link>
         </div>
