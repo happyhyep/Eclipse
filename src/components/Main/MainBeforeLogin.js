@@ -13,7 +13,7 @@ const MainBeforeLogin = () => {
         <PageDiv>
             <Container></Container>   
                <div style={{position: 'fixed', bottom:'0', width: '100%', fontFamily: "Neo"}}>
-                <Box style={{height: '200px'}}>
+                <Box style={{height: '200px', borderRadius: '15px'}}>
                     <div style={{fontSize: '15px'}}>로그인 후 서비스를 이용해봐!</div>
                     <div style={{fontSize: '20px'}}>[가나다라]</div>
                     <div style={{fontSize: '15px'}}>의미있는 대학생활을 위한 메타버스</div>

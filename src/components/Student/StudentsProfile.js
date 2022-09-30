@@ -37,15 +37,15 @@ function FriendsProfile({ user }) {
                 )}
             </div>
             <div style={{textAlign: 'center'}}>
-            <p style={{fontSize: '15px', marginBottom: '1px'}}>{nickname}</p>
-            <p style={{fontSize: '12px', marginBottom: '0.5px'}}>{department} {student_id}학번</p>
-            <p style={{fontSize: '12px', marginTop: '0.5px'}}>전공 평점 : {department_score}</p>
+            <p style={{fontSize: '15px', marginBottom: '1px', fontFamily: "Neo"}}>{nickname}</p>
+            <p style={{fontSize: '12px', marginBottom: '1px', fontFamily: "Neo"}}>{department} {student_id}학번</p>
+            <p style={{fontSize: '12px', marginTop: '1px', fontFamily: "Neo"}}>전공 평점 : {department_score}</p>
             </div>
             <button
                     onClick={() => {
                         openModal(user.id);
                     }}
-                    style={{ fontSize: '10px', color: 'black' }}
+                    style={{fontSize: '10px', height:'35px', fontFamily: "Neo", color: 'black', borderRadius: '6px'}}
                 >
                     프로필 보기
                 </button>
@@ -54,7 +54,7 @@ function FriendsProfile({ user }) {
                     onClick={() => {
                         onRequestHandler();
                     }}
-                    style={{ marginTop: '10px', fontSize: '15px', color: 'black' }}
+                    style={{ paddingBottom: '1px',height:'50px', marginTop: '10px', fontSize: '13px', fontFamily: "Neo", color: 'black', borderRadius: '8px'}}
                 >
                     💌 대학원 섭외하기
                 </button>

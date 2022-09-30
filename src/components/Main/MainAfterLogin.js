@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-
+import img1 from '../../Layout/img/mainafterlogin.png'
 import { Link } from "react-router-dom";
 import { Box } from "../Styled/Box";
-import { getTest } from "../../store/axiosTest";
+import styled from 'styled-components';
 import { PageDiv } from "../../pages/Recruit";
 
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
 
   return (
-    <PageDiv>
+    <PageDiv style={{fontFamily: "Neo"}}>
+      <Container></Container>   
       <h1>
         <a style={{ color: "white", fontSize: "min(6vw, 40px)" }}>대충 배경</a>
       </h1>
       <div
         style={{
           display: "flex",
-
           gap: "0.5em",
           alignItems: "center",
           marginTop: "20px",
@@ -31,34 +31,36 @@ const MainPage = () => {
           fontSize: "20px",
         }}
       >
-        <Box>
+        <Box style={{height: '200px', borderRadius: '15px'}}>
           어떤 서비스를 이용할거니?
           <div>
             <Link to={"/timetable"}>
               <div>
-                <button style={{ color: "black", fontSize: "15px" }}>
+                <button style={{ color: "black", fontSize: "15px", height:'30px', borderRadius:'6px', fontFamily: "Neo", marginBottom:'10px'}}>
                   1. 시간표 어쩌고
                 </button>
               </div>
             </Link>
             <div>
               <Link to={"/recruit"}>
-                <button style={{ color: "black", fontSize: "15px" }}>
+                <button style={{ color: "black", fontSize: "15px", height:'30px', borderRadius:'6px', fontFamily: "Neo", marginBottom:'10px'}}>
                   2. 납치 어쩌고
                 </button>
               </Link>
             </div>
             <div>
               <Link to={"/give"}>
-                <button style={{ color: "black", fontSize: "15px" }}>
+                <button style={{ color: "black", fontSize: "15px", height:'30px', borderRadius:'6px', fontFamily: "Neo", marginBottom:'10px'}}>
                   3. 후원 어쩌고
                 </button>
               </Link>
+              <div>
               <Link to={"/myprofile"}>
-                <button style={{ color: "black", fontSize: "15px" }}>
+                <button style={{ color: "black", fontSize: "15px", height:'30px', borderRadius:'6px', fontFamily: "Neo", marginBottom:'10px'}}>
                   4. 내 프로필 관리하기
                 </button>
               </Link>
+              </div>
             </div>
           </div>
         </Box>
@@ -68,3 +70,13 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
+const Container = styled.div`
+  position: absolute;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(${img1});
+  background-size: cover;
+`;
