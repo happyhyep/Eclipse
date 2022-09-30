@@ -5,6 +5,7 @@ import { PageDiv } from "../pages/Recruit";
 import { UserBox } from "../components/Styled/UserBox";
 import { useState } from "react";
 import { TextareaInput } from "../components/Styled/input";
+import { BasicInput } from "../components/Styled/input";
 
 function MyProfile() {
   const auth = useAuth();
@@ -28,6 +29,7 @@ function MyProfile() {
     department_score,
     all_score,
     student_id,
+    award,
   } = user;
   const onClick = () => {
     alert("수정완료");
@@ -85,7 +87,8 @@ function MyProfile() {
               marginRight: "30px",
             }}
           >
-            나를 소개해요 {"  "}
+            나를 소개해요(자기소개, 관심분야, 수상경력, 배우고 싶은 분야 등){" "}
+            {"  "}
             <div style={{ display: "flex" }}>
               <TextareaInput
                 name="etc"
