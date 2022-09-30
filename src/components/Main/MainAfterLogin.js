@@ -9,8 +9,6 @@ import AlarmModal from "../Common/AlarmModal";
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
 
-
-
   const auth = useAuth();
   const { user } = auth;
   const [modalOpen, setModalOpen] = useState(null);
@@ -35,8 +33,11 @@ const MainPage = () => {
             right: "30px",
           }}
         >
-          <h style={{ fontSize: "25px" }}>{user.nickname} 님의 프로필</h>
-
+          <div style={{ fontSize: "25px" }}>{user.nickname} 님의 프로필</div>
+          <div style={{ fontSize: "15px" }}>{user.department}</div>
+          <div style={{ fontSize: "15px" }}>전공 학점 평균 : {user.department_score} / 4.3</div>
+          <div style={{ fontSize: "13px" }}>본인 소개 : </div>
+          <div style={{ fontSize: "13px" }}>{user.etc}</div>
         </Box>
       </div>
       <div
@@ -129,7 +130,7 @@ const MainPage = () => {
               <AlarmModal
                 modalOpen={modalOpen}
                 setModalOpen={setModalOpen}
-                header={`📰 ${user.alarm.length}개의 알람`}
+
                 alarm={user.alarm}
               ></AlarmModal>
             </div>

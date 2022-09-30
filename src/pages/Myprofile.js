@@ -33,6 +33,7 @@ function MyProfile() {
     etc,
   } = user;
   const onClick = () => {
+    modifyEtc(inputs);
     alert("수정완료");
     setInputs({ etc: "" });
   };

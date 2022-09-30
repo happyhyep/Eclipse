@@ -2,7 +2,7 @@ import { useState } from "react";
 import { PageDiv } from "../pages/Recruit";
 import axios from 'axios';
 import login from '../store/loginAxios'
-import { Form, useNavigate } from "react-router-dom";
+import { Form, resolvePath, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/auth/auth";
 import { getUserInfo } from "../store/userAxios";
 import { setIsLoggedIn }from "../../src/App"
@@ -24,6 +24,7 @@ const Login = (props) => {
              formData.append("password",loginPw);        
              axios.post("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/login", formData)
              .then(function (response) {
+                console.log(response)
                 console.log('로그인');
                 console.log(response.data);
                 localStorage.setItem('user_id', loginId);
