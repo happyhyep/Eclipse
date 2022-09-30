@@ -32,6 +32,7 @@
       "react-app/jest"
     ]
   },
+  "eslint.workingDirectories": [ "projects/project-a" ],
   "browserslist": {
     "production": [
       ">0.2%",
