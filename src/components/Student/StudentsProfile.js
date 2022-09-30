@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import { UserBox } from "../Styled/UserBox";
 import UserProfileModal from "./UserProfileModal";
-
+import Pbuttons from "../professor/Pbuttons";
+import { useAuth } from "../../Context/auth/auth";
 function FriendsProfile({ user }) {
   const {
     profileImage,
@@ -14,16 +15,7 @@ function FriendsProfile({ user }) {
   } = user;
   const [isRequest, setIsRequest] = useState(false);
   const theme = useTheme();
-
-  const onRequestHandler = async (targetUserId) => {
-    //alert(`❗친구요청실패❗${e}`); //주석지우기 (8/23)
-    setIsRequest(true);
-    alert("대학원 납치 완료!"); // 지우기 (8/23)
-  };
-  const onCancelHandler = () => {
-    setIsRequest(false);
-    alert("요청 취소 완료!");
-  };
+  const auth = useAuth();
 
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = (targetUserId) => {
@@ -67,33 +59,8 @@ function FriendsProfile({ user }) {
       >
         프로필 보기
       </button>
-      {!isRequest ? (
-        <button
-          onClick={() => {
-            onRequestHandler();
-          }}
-          style={{
-            paddingBottom: "1px",
-            height: "50px",
-            marginTop: "10px",
-            fontSize: "13px",
-            fontFamily: "Neo",
-            color: "black",
-            borderRadius: "8px",
-          }}
-        >
-          💌 대학원 섭외하기
-        </button>
-      ) : (
-        <button
-          onClick={() => {
-            onCancelHandler();
-          }}
-          style={{ marginTop: "10px", fontSize: "15px", color: "black" }}
-        >
-          ❌ 섭외 취소하기
-        </button>
-      )}
+      {auth?.isProfessor && <Pbuttons />}
+
       <UserProfileModal
         open={modalOpen}
         close={closeModal}

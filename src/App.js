@@ -16,7 +16,7 @@ import { tempUser } from "./store/temp/tempUserData";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isStudent, setIsStudent] = useState(true);
-  const [isProfessor, setIsProfessor] = useState(false);
+  const [isProfessor, setIsProfessor] = useState(true);
   const [user, setUser] = useState(tempUser[0]); // null
 
   // useEffect(() => {
@@ -36,8 +36,8 @@ function App() {
           isProfessor,
         }}
       >
-        <BaseLayout></BaseLayout>
         <Router>
+          <BaseLayout></BaseLayout>
           <Routes>
             <Route key="main" path="/" element={<Main />} />
             <Route key="timetable" path="/timetable" element={<Timetable />} />
