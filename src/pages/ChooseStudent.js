@@ -4,23 +4,23 @@ import StudentsProfile from '../components/Student/StudentsProfile';
 import styled from 'styled-components';
 import { tempUser } from '../store/temp/tempUserData';
 import { getTest } from '../store/axiosTest';
-import axios from 'axios';
 
+const axios = require ('axios');
 const ChooseStudent = () => {
     const [allUserList, setAllUserList] = useState(tempUser);
     const [searchUserList, setSearchedUserList] = useState([]);
     const [searchText, setSearchText] = useState('');
 
-    // const [users, setUsers] = useState([]);
-    // const request = axios.get('/test/');
-    // useEffect(() => {
-    //     axios.get('/test/')
-    //         .then(response => {
-    //             setUsers(response.data);
-    //         });
-    // }, []);
-    // console.log(users);
-    // console.log(request);
+
+    const TestApiCall = async() => {
+        try{
+                const response = await axios.get("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/test")
+                console.log(response);
+        } catch(err) {
+                    console.log(err);
+                }
+        }
+
     
     useEffect(() => {
         // @ts-ignore

@@ -40,7 +40,7 @@ function App() {
                     ))}
                 </Routes>
             </BaseLayout>
-            <MainBeforeLogin></MainBeforeLogin>
+            <ChooseStudent></ChooseStudent>
         </AuthContext.Provider>
       </div>
     );
