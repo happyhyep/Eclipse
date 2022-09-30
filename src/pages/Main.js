@@ -8,19 +8,7 @@ import { useAuth } from "../Context/auth/auth";
 
 const Main = () => {
   const auth = useAuth();
-  return (
-    <>
-      {auth?.isLoggedIn ? (
-        auth?.isStudent ? (
-          <MainAfterLogin />
-        ) : (
-          <ChooseStudent />
-        )
-      ) : (
-        <MainBeforeLogin />
-      )}
-    </>
-  );
+  return <>{auth?.isLoggedIn ? <MainAfterLogin /> : <MainBeforeLogin />}</>;
 };
 
 Main.propsTypes = {
