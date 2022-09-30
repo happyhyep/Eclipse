@@ -34,11 +34,13 @@ const MainPage = () => {
             right: "30px",
           }}
         >
+
           <div style={{ fontSize: "25px" }}> {auth.auth.Nick_Name}님의 프로필</div>
           <div style={{ fontSize: "15px" }}> {auth.auth.Hakgwa}</div>
           <div style={{ fontSize: "15px" }}>전공 학점 평균 :  {auth.auth.score}/ 4.3</div>
           <div style={{ fontSize: "13px" }}>본인 소개 : {auth.auth.etc}</div>
           <div style={{ fontSize: "13px" }}></div>
+
         </Box>
       </div>
       <div
@@ -131,7 +133,6 @@ const MainPage = () => {
               <AlarmModal
                 modalOpen={modalOpen}
                 setModalOpen={setModalOpen}
-
               ></AlarmModal>
             </div>
           </div>
