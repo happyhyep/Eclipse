@@ -42,14 +42,18 @@ const MainPage = () => {
               </div>
             </Link>
             <div>
-              <button style={{ color: "black", fontSize: "15px" }}>
-                2. 납치 어쩌고
-              </button>
+              <Link to={"/recruit"}>
+                <button style={{ color: "black", fontSize: "15px" }}>
+                  2. 납치 어쩌고
+                </button>
+              </Link>
             </div>
             <div>
-              <button style={{ color: "black", fontSize: "15px" }}>
-                3. 후원 어쩌고
-              </button>
+              <Link to={"/give"}>
+                <button style={{ color: "black", fontSize: "15px" }}>
+                  3. 후원 어쩌고
+                </button>
+              </Link>
             </div>
           </div>
         </Box>
