@@ -24,10 +24,11 @@ const Login = () => {
                 console.log('로그인');
                 }
              )
+             console.log(loginId);
+             console.log(loginPw);
              alert('로그인 완료');
             setLoginId('');
             setLoginPw('');
-
     };
 
     return (

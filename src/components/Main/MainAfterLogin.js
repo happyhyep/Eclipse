@@ -10,10 +10,12 @@ const MainPage = () => {
 
   return (
     <PageDiv style={{fontFamily: "Neo"}}>
-        <div style= {{position: "fixed",float:'right'}}>
-        <Box style={{height: '200px', width:'500px',alignItems:'right', borderRadius: '15px'}}></Box>
-        </div>        
       <Container></Container>       
+      <div style= {{position: "fixed",float:'right'}}>
+        <Box style={{height: '200px', width:'500px', borderRadius: '15px', marginRight: '10px'}}>
+          <h style={{fontSize: '25px'}}>000님의 프로필</h>
+        </Box>
+        </div>        
       <div
         style={{
           position: "fixed",

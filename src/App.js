@@ -14,7 +14,7 @@ import Myprofile from "./pages/Myprofile";
 import { tempUser } from "./store/temp/tempUserData";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isStudent, setIsStudent] = useState(true);
   const [isProfessor, setIsProfessor] = useState(false);
   const [user, setUser] = useState(tempUser[0]); // null
