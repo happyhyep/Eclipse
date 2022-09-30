@@ -2,10 +2,10 @@ import React from "react";
 import Login from "../components/Login";
 import { PageDiv } from "./Recruit";
 
-const LoginPage = () => {
+const LoginPage = (props) => {
   return (
     <PageDiv>
-      <Login></Login>
+      <Login setIsLoggedIn={props.setIsLoggedIn}></Login>
     </PageDiv>
   );
 };

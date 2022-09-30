@@ -13,18 +13,19 @@ import LoginPage from "./pages/LoginPage";
 import Myprofile from "./pages/Myprofile";
 import { tempUser } from "./store/temp/tempUserData";
 import Payment from "./pages/Payment";
+import { getUserInfo } from "./store/userAxios";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isStudent, setIsStudent] = useState(true);
-  const [isProfessor, setIsProfessor] = useState(false);
+  const [isProfessor, setIsProfessor] = useState(true);
   const [user, setUser] = useState(tempUser[0]); // null
-
+  var currentuser = localStorage.getItem('user_id');
   // useEffect(() => {
-  //     getCurrentUserInfo().then((res) => {
-  //         setUser(res.data);
-  //         setIsLoggedIn(true);
-  //     });
+  //   getUserInfo(currentuser).then((res) => {
+  //     setUser(res.data);
+  //     setIsLoggedIn(true);
+  //   });
   // }, []);
 
   return (
@@ -44,7 +45,7 @@ function App() {
             <Route key="timetable" path="/timetable" element={<Timetable />} />
             <Route key="recruit" path="/recruit" element={<Recruit />} />
             <Route key="giveit" path="/give" element={<Give />} />
-            <Route key="login" path="/login" element={<LoginPage />} />
+            <Route key="login" path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
             <Route key="myprofile" path="/myprofile" element={<Myprofile />} />
             <Route key="payment" path="/payment" element={<Payment />} />
           </Routes>

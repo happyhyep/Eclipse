@@ -23,11 +23,14 @@ const TopMenu = () => {
         <div className="title-bar-controls">
           <div
             className="title-bar-text"
-            style={{ display: "flex", fontSize: "20px" }}
+            style={{ display: "flex", fontSize: "15px", fontFamily:"Neo" }}
           >
-            {`잔고 : ${user.money}`}
-            <button onClick={onClick}>충전하기</button>
+            잔고 : {`${user.money}`}
           </div>
+            <div>
+              <button onClick={onClick}>충전하기</button>
+            </div>
+          
 
           <button aria-label="Minimize"></button>
           <button aria-label="Maximize"></button>

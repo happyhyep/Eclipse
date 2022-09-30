@@ -7,13 +7,14 @@ import { PageDiv } from "../../pages/Recruit";
 
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
-
+  var user = localStorage.getItem('user_id');
+  console.log(user)
   return (
     <PageDiv style={{fontFamily: "Neo"}}>
       <Container></Container>       
       <div style= {{position: "fixed",float:'right'}}>
         <Box style={{height: '200px', width:'500px', borderRadius: '15px', marginRight: '10px', position: 'fixed', top: '100px', right: '30px'}}>
-          <h style={{fontSize: '25px'}}>000님의 프로필</h>
+          <h style={{fontSize: '25px'}}>{user}님의 프로필</h>
         </Box>
         </div>        
       <div

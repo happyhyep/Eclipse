@@ -2,22 +2,21 @@ import { useState } from "react";
 import { PageDiv } from "../pages/Recruit";
 import axios from 'axios';
 import login from '../store/loginAxios'
-import { Form } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 import { useAuth } from "../Context/auth/auth";
-
-
-const Login = () => {
+import { getUserInfo } from "../store/userAxios";
+import { setIsLoggedIn }from "../../src/App"
+const Login = (props) => {
     const [loginId, setLoginId] = useState(''); 
     const [loginPw, setLoginPw] = useState('');
     const [loginUser, setLoginUser] = useState('');
-    
+
     const onPressEnter = (e) => {
         if (e.key == 'Enter') {
             onSubmit();
         }
     };
-    const auth = getAuth();
-
+    const navigate = useNavigate();
     const onSubmit = (e) => {
              e.preventDefault();  
              const formData = new FormData();
@@ -27,8 +26,10 @@ const Login = () => {
              .then(function (response) {
                 console.log('로그인');
                 console.log(response.data);
-                setLoginUser(response.data);
-                const user = loginUser;
+                localStorage.setItem('user_id', loginId);
+                console.log(localStorage.getItem('user_id'));
+                props.setIsLoggedIn(true);
+                navigate("/");
                 }
              )
             setLoginId('');
