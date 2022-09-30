@@ -10,7 +10,8 @@ const MainPage = () => {
   const [editMode, setEditMode] = useState(false);
 
   const auth = useAuth();
-  const { user } = auth;
+  const { user } = auth.auth;
+
   const [modalOpen, setModalOpen] = useState(null);
   const openModal = () => {
     setModalOpen(true);
@@ -33,11 +34,11 @@ const MainPage = () => {
             right: "30px",
           }}
         >
-          <div style={{ fontSize: "25px" }}>{user.nickname} 님의 프로필</div>
-          <div style={{ fontSize: "15px" }}>{user.department}</div>
-          <div style={{ fontSize: "15px" }}>전공 학점 평균 : {user.department_score} / 4.3</div>
-          <div style={{ fontSize: "13px" }}>본인 소개 : </div>
-          <div style={{ fontSize: "13px" }}>{user.etc}</div>
+          <div style={{ fontSize: "25px" }}> {auth.auth.Nick_Name}님의 프로필</div>
+          <div style={{ fontSize: "15px" }}> {auth.auth.Hakgwa}</div>
+          <div style={{ fontSize: "15px" }}>전공 학점 평균 :  {auth.auth.score}/ 4.3</div>
+          <div style={{ fontSize: "13px" }}>본인 소개 : {auth.auth.etc}</div>
+          <div style={{ fontSize: "13px" }}></div>
         </Box>
       </div>
       <div
@@ -131,7 +132,6 @@ const MainPage = () => {
                 modalOpen={modalOpen}
                 setModalOpen={setModalOpen}
 
-                alarm={user.alarm}
               ></AlarmModal>
             </div>
           </div>

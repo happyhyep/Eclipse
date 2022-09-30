@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import BaseLayout from "./components/BaseLayout";
 import { AuthContext } from "./Context/auth/auth";
@@ -19,21 +19,21 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isStudent, setIsStudent] = useState(true);
   const [isProfessor, setIsProfessor] = useState(true);
-  const [user, setUser] = useState(tempUser[0]); // null
+  const [auth, setUser] = useState(); // null
   var currentuser = localStorage.getItem('user_id');
   // useEffect(() => {
   //   getUserInfo(currentuser).then((res) => {
-  //     setUser(res.data);
-  //     setIsLoggedIn(true);
-  //   });
-  // }, []);
+  //      setUser(res.data);
+  //      //setIsLoggedIn(true);
+  //    });
+  //  }, []);
 
   return (
     <div style={{ backgroundColor: "#c0c0c0", height: "100vh" }}>
       <AuthContext.Provider
         value={{
           isLoggedIn,
-          user,
+          auth,
           isStudent,
           isProfessor,
         }}
@@ -45,7 +45,7 @@ function App() {
             <Route key="timetable" path="/timetable" element={<Timetable />} />
             <Route key="recruit" path="/recruit" element={<Recruit />} />
             <Route key="giveit" path="/give" element={<Give />} />
-            <Route key="login" path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} />} />
+            <Route key="login" path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} setUser={setUser} />} />
             <Route key="myprofile" path="/myprofile" element={<Myprofile />} />
             <Route key="payment" path="/payment" element={<Payment />} />
           </Routes>

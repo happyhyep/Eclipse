@@ -29,6 +29,8 @@ const Login = (props) => {
                 console.log(response.data);
                 localStorage.setItem('user_id', loginId);
                 console.log(localStorage.getItem('user_id'));
+
+                props.setUser(response.data);
                 props.setIsLoggedIn(true);
                 navigate("/");
                 }

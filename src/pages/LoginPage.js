@@ -5,7 +5,7 @@ import { PageDiv } from "./Recruit";
 const LoginPage = (props) => {
   return (
     <PageDiv>
-      <Login setIsLoggedIn={props.setIsLoggedIn}></Login>
+      <Login setIsLoggedIn={props.setIsLoggedIn} setUser={props.setUser}></Login>
     </PageDiv>
   );
 };
