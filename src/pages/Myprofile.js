@@ -6,12 +6,12 @@ import { UserBox } from "../components/Styled/UserBox";
 import { useState } from "react";
 import { TextareaInput } from "../components/Styled/input";
 import { BasicInput } from "../components/Styled/input";
+import img1 from "../Layout/img/pixel1.png";
 
 function MyProfile() {
   const auth = useAuth();
-  const { user } = auth;
   const [inputs, setInputs] = useState({
-    etc: user?.etc,
+    etc: auth.auth?.etc,
   });
   const onChange = (e) => {
     if (e.target.name === "etc") {
@@ -20,18 +20,7 @@ function MyProfile() {
       });
     }
   };
-  const {
-    profileImage,
-    name,
-    email,
-    nickname,
-    department,
-    department_score,
-    all_score,
-    student_id,
-    award,
-    etc,
-  } = user;
+
   const onClick = () => {
     modifyEtc(inputs);
     alert("수정완료");
@@ -55,20 +44,20 @@ function MyProfile() {
             fontSize: "50px",
           }}
         >
-          {user.nickname}
+          {auth.auth.Nick_Name}
         </a></div>
         <div><a style={{
             color: "black",
             fontSize: "min(6vw, 40px)",
             fontFamily: "Neo",
             fontSize: "20px",
-        }}>{user.name}</a>
+        }}>{auth.auth.name}</a>
       </div></div>
       <p>
       <div style={{width: '500px', height: '50px', fontSize: "15px", fontFamily: "Neo", alignItems: 'center', textAlign: 'center', display: "flex", justifyContent:'center'}}>
           <div style={{display: 'flow'}}>
-          <div>{department} {student_id}학번</div>
-          <div>{department_score} (전공학점)</div>
+          <div>{auth.auth.Hakgwa}</div>
+          <div>{auth.auth.score} (전공학점)</div>
           </div>
         </div>
       </p>
@@ -82,8 +71,8 @@ function MyProfile() {
             marginTop: "5%",
           }}
         >
-          {profileImage ? (
-            <img src={profileImage} width="300px" height="300px" />
+          {img1 ? (
+            <img src={img1} width="300px" height="300px" />
           ) : (
             <img
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
