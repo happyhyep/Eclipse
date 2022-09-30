@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import styled, { useTheme } from "styled-components";
 import { UserBox } from "../Styled/UserBox";
-import UserProfileModal from "./UserProfileModal";
+import UserProfileModal from "../Student/UserProfileModal";
 import Pbuttons from "../professor/Pbuttons";
 import { useAuth } from "../../Context/auth/auth";
 import RecruitButton from "../Common/RecruitButton";
-function FriendsProfile({ user }) {
+function RecruitProfile({ user }) {
   const {
     profileImage,
     nickname,
@@ -57,8 +57,7 @@ function FriendsProfile({ user }) {
       >
         프로필 보기
       </button>
-
-      {auth?.isProfessor && <Pbuttons />}
+      <RecruitButton />
 
       <UserProfileModal
         open={modalOpen}
@@ -69,4 +68,4 @@ function FriendsProfile({ user }) {
   );
 }
 
-export default FriendsProfile;
+export default RecruitProfile;
