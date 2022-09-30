@@ -12,7 +12,7 @@ import Login from "./pages/LoginPage";
 import LoginPage from "./pages/LoginPage";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isStudent, setIsStudent] = useState(true);
   const [isProfessor, setIsProfessor] = useState(false);
   const [user, setUser] = useState(null);
