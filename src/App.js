@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import "./App.css";
 import BaseLayout from "./components/BaseLayout";
 import { AuthContext } from "./Context/auth/auth";
-import { Routes, Route } from "react-router-dom";
 import routes from "./components/Common/Routes";
 import Main from "./pages/Main";
 import MainBeforeLogin from "./components/Main/MainBeforeLogin";
 import MainAfterLogin from "./components/Main/MainAfterLogin";
 import ChooseStudent from "./pages/ChooseStudent";
 import Animation from "./pages/Animation";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isStudent, setIsStudent] = useState(false);
-  const [isProfessor, setIsProfessor] = useState(false);
+  const [isProfessor, setIsProfessor] = useState(true);
   const [user, setUser] = useState(null);
 
   // useEffect(() => {
@@ -29,18 +29,16 @@ function App() {
         value={{
           isLoggedIn,
           user,
+          isStudent,
+          isProfessor,
         }}
       >
         <BaseLayout></BaseLayout>
-        {isLoggedIn ? (
-          isStudent ? (
-            <MainAfterLogin />
-          ) : (
-            <ChooseStudent />
-          )
-        ) : (
-          <MainBeforeLogin />
-        )}
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main />} />
+          </Routes>
+        </Router>
       </AuthContext.Provider>
     </div>
   );
