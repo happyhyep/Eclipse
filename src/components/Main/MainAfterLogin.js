@@ -54,6 +54,11 @@ const MainPage = () => {
                   3. 후원 어쩌고
                 </button>
               </Link>
+              <Link to={"/myprofile"}>
+                <button style={{ color: "black", fontSize: "15px" }}>
+                  4. 내 프로필 관리하기
+                </button>
+              </Link>
             </div>
           </div>
         </Box>

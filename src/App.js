@@ -8,12 +8,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Timetable from "./pages/Timetable";
 import Recruit from "./pages/Recruit";
 import Give from "./pages/Give";
-
+import Myprofile from "./pages/Myprofile";
+import { tempUser } from "./store/temp/tempUserData";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [isStudent, setIsStudent] = useState(true);
-  const [isProfessor, setIsProfessor] = useState(false);
-  const [user, setUser] = useState(null);
+  const [isProfessor, setIsProfessor] = useState(true);
+  const [user, setUser] = useState(tempUser[0]); // null
 
   // useEffect(() => {
   //     getCurrentUserInfo().then((res) => {
@@ -39,6 +40,7 @@ function App() {
             <Route key="timetable" path="/timetable" element={<Timetable />} />
             <Route key="recruit" path="/recruit" element={<Recruit />} />
             <Route key="giveit" path="/give" element={<Give />} />
+            <Route key="myprofile" path="/myprofile" element={<Myprofile />} />
           </Routes>
         </Router>
       </AuthContext.Provider>
