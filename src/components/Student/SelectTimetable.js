@@ -17,7 +17,7 @@ function SelectTimetable({ user, timetable }) {
     etc,
     id,
   } = user;
-  const { code, name, professor } = timetable;
+  //const { code, name, professor } = timetable;
   const [isRequest, setIsRequest] = useState(false);
   const theme = useTheme();
   const auth = useAuth();

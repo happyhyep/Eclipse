@@ -5,7 +5,7 @@ const Pbuttons = () => {
   const onRequestHandler = async (targetUserId) => {
     //alert(`❗친구요청실패❗${e}`); //주석지우기 (8/23)
     setIsRequest(true);
-    alert("대학원 납치 완료!"); // 지우기 (8/23)
+    alert("대학원 섭외 완료!"); // 지우기 (8/23)
   };
   const onCancelHandler = () => {
     setIsRequest(false);

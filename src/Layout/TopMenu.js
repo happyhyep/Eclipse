@@ -25,7 +25,7 @@ const TopMenu = () => {
             className="title-bar-text"
             style={{ display: "flex", fontSize: "15px", fontFamily:"Neo" }}
           >
-            잔고 : 
+            잔고 : 10000원
           </div>
             <div>
               <button onClick={onClick}>충전하기</button>

@@ -34,13 +34,14 @@ const MainPage = () => {
             right: "30px",
           }}
         >
-
-          <div style={{ fontSize: "25px" }}> {auth.auth.Nick_Name}님의 프로필</div>
+          <div style={{ fontSize: "25px" }}>
+            {" "}
+            {auth.auth.Nick_Name}님의 프로필
+          </div>
           <div style={{ fontSize: "15px" }}> {auth.auth.Hakgwa}</div>
           <div style={{ fontSize: "15px" }}>전공 학점 평균 :  {auth.auth.score} / 4.3</div>
           <div style={{ fontSize: "13px" }}>자기소개 : 안녕하세요 적당히 바람이 시원해 기분이 너무 좋아요 유후!</div>
           <div style={{ fontSize: "13px" }}></div>
-
         </Box>
       </div>
       <div
@@ -63,10 +64,11 @@ const MainPage = () => {
                     height: "30px",
                     borderRadius: "6px",
                     fontFamily: "Neo",
-                    marginBottom: "10px",
+                    marginBottom: "8px",
+                    marginTop: '10px'
                   }}
                 >
-                  1. 시간표 어쩌고
+                  1. 📅 시간표 추천
                 </button>
               </div>
             </Link>
@@ -79,10 +81,10 @@ const MainPage = () => {
                     height: "30px",
                     borderRadius: "6px",
                     fontFamily: "Neo",
-                    marginBottom: "10px",
+                    marginBottom: "8px",
                   }}
                 >
-                  2. 납치 어쩌고
+                  2. 🔊 교수-학생 소통
                 </button>
               </Link>
             </div>
@@ -95,10 +97,10 @@ const MainPage = () => {
                     height: "30px",
                     borderRadius: "6px",
                     fontFamily: "Neo",
-                    marginBottom: "10px",
+                    marginBottom: "8px",
                   }}
                 >
-                  3. 후원 어쩌고
+                  3. 💘 후원 시스템
                 </button>
               </Link>
               <div>
@@ -110,10 +112,10 @@ const MainPage = () => {
                       height: "30px",
                       borderRadius: "6px",
                       fontFamily: "Neo",
-                      marginBottom: "10px",
+                      marginBottom: "8px",
                     }}
                   >
-                    4. 내 프로필 관리하기
+                    4. 💬 내 프로필 관리
                   </button>
                 </Link>
               </div>
@@ -124,11 +126,11 @@ const MainPage = () => {
                   height: "30px",
                   borderRadius: "6px",
                   fontFamily: "Neo",
-                  marginBottom: "10px",
+                  marginBottom: "8px",
                 }}
                 onClick={openModal}
               >
-                5. 📩알람 확인하기
+                5. 📩 알람 확인하기
               </button>
               <AlarmModal
                 modalOpen={modalOpen}
