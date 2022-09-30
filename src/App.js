@@ -15,6 +15,8 @@ import { tempUser } from "./store/temp/tempUserData";
 import { tempProfessorData } from "./store/temp/tempProfessorData";
 import Payment from "./pages/Payment";
 import { getUserInfo } from "./store/userAxios";
+import TimetableInfo from "./components/Student/TimetableInfo";
+import TableTest from "./components/Common/TableTest";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -44,6 +46,11 @@ function App() {
           <Routes>
             <Route key="main" path="/" element={<Main />} />
             <Route key="timetable" path="/timetable" element={<Timetable />} />
+            <Route
+              key="timetable_info"
+              path="/timetable_info/:id"
+              element={<TimetableInfo />}
+            />
             <Route key="recruit" path="/recruit" element={<Recruit />} />
             <Route key="giveit" path="/give" element={<Give />} />
             <Route
@@ -53,6 +60,11 @@ function App() {
             />
             <Route key="myprofile" path="/myprofile" element={<Myprofile />} />
             <Route key="payment" path="/payment" element={<Payment />} />
+            <Route
+              key="timetabletest"
+              path="/tabletest"
+              element={<TableTest />}
+            />
           </Routes>
         </Router>
       </AuthContext.Provider>
