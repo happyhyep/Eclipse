@@ -1,4 +1,4 @@
-import { PageDiv } from "./ChooseStudent";
+import PageDiv from "./Recruit";
 import { useAuth } from "../Context/auth/auth";
 import { Box } from "../components/Styled/Box";
 import { Link } from "react-router-dom";
