@@ -10,19 +10,10 @@ const MainPage = () => {
 
   return (
     <PageDiv style={{fontFamily: "Neo"}}>
-      <Container></Container>   
-      <h1>
-        <a style={{ color: "white", fontSize: "min(6vw, 40px)" }}>대충 배경</a>
-      </h1>
-      <div
-        style={{
-          display: "flex",
-          gap: "0.5em",
-          alignItems: "center",
-          marginTop: "20px",
-          justifyContent: "flex-end",
-        }}
-      ></div>
+        <div style= {{position: "fixed",float:'right'}}>
+        <Box style={{height: '200px', width:'500px',alignItems:'right', borderRadius: '15px'}}></Box>
+        </div>        
+      <Container></Container>       
       <div
         style={{
           position: "fixed",

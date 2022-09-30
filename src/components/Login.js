@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { PageDiv } from "../pages/Recruit";
+import axios from 'axios';
+import login from '../store/loginAxios'
+
 
 const Login = () => {
     const [loginId, setLoginId] = useState(''); 
     const [loginPw, setLoginPw] = useState('');
+    
     const onPressEnter = (e) => {
         if (e.key == 'Enter') {
             onSubmit();
@@ -12,7 +16,14 @@ const Login = () => {
 
     const onSubmit = (e) => {
              e.preventDefault();          
-             //auth
+             axios.post("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/login", {
+                userid: loginId,
+                password: loginPw
+             })
+             .then(function (response) {
+                console.log('로그인');
+                }
+             )
              alert('로그인 완료');
             setLoginId('');
             setLoginPw('');
