@@ -1,4 +1,4 @@
-import { PageDiv } from "./ChooseStudent";
+import { PageDiv } from "./Recruit";
 
 const Give = () => {
   return (

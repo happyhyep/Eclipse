@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { SearchBox } from '../components/Common/SearchBox';
 import StudentsProfile from '../components/Student/StudentsProfile';
@@ -68,24 +67,7 @@ const Recruit = () => {
             )}
         </PageDiv>
     );
-=======
-import { PageDiv } from "./ChooseStudent";
-
-const Recruit = () => {
-  return (
-    <>
-      <PageDiv>
-        <h1>
-          <a style={{ color: "white", fontSize: "min(6vw, 40px)" }}>
-            From Professor...
-          </a>
-        </h1>
-      </PageDiv>
-    </>
-  );
->>>>>>> a656420baa0ba388bb60c8f590c0bd8d61295432
-};
-
+}
 export default Recruit;
 
 export const PageDiv = styled.div`
