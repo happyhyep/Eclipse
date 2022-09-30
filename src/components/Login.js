@@ -22,6 +22,7 @@ const Login = () => {
              })
              .then(function (response) {
                 console.log('로그인');
+                console.log(response.data);
                 }
              )
              console.log(loginId);

@@ -12,7 +12,7 @@ const MainPage = () => {
     <PageDiv style={{fontFamily: "Neo"}}>
       <Container></Container>       
       <div style= {{position: "fixed",float:'right'}}>
-        <Box style={{height: '200px', width:'500px', borderRadius: '15px', marginRight: '10px'}}>
+        <Box style={{height: '200px', width:'500px', borderRadius: '15px', marginRight: '10px', position: 'fixed', top: '100px', right: '30px'}}>
           <h style={{fontSize: '25px'}}>000님의 프로필</h>
         </Box>
         </div>        
@@ -25,7 +25,7 @@ const MainPage = () => {
         }}
       >
         <Box style={{height: '200px', borderRadius: '15px'}}>
-          어떤 서비스를 이용할거니?
+          어떤 서비스를 이용하실래요?
           <div>
             <Link to={"/timetable"}>
               <div>
