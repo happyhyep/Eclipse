@@ -3,7 +3,7 @@ import img1 from '../../Layout/img/person.png';
 import { Box } from '../Styled/Box';
 import khu from '../../Layout/img/khu.png';
 import styled from 'styled-components';
-import { PageDiv } from '../../pages/ChooseStudent';
+import { PageDiv } from '../../pages/Recruit';
 
 const MainBeforeLogin = () => {
       

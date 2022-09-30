@@ -8,6 +8,7 @@ export const AuthContext = createContext({
         name: null,
         profileImage: null,
         nickname: null,
+        student_id: null,
         department: null,
         department_score: null,
         all_score: [],

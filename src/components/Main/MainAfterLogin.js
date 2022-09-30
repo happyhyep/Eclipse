@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Box } from "../Styled/Box";
 import { getTest } from "../../store/axiosTest";
-import { PageDiv } from "../../pages/ChooseStudent";
+import { PageDiv } from "../../pages/Recruit";
 
 const MainPage = () => {
   const [editMode, setEditMode] = useState(false);

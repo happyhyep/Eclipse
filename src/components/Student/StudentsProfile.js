@@ -4,7 +4,7 @@ import { UserBox} from '../../components/Styled/UserBox';
 import UserProfileModal from '../UserProfileModal';
 
 function FriendsProfile({ user }) {
-    const { profileImage, nickname, department, department_score } = user;
+    const { profileImage, nickname, department, department_score, student_id } = user;
     const [isRequest, setIsRequest] = useState(false);
     const theme = useTheme();
 
@@ -38,7 +38,7 @@ function FriendsProfile({ user }) {
             </div>
             <div style={{textAlign: 'center'}}>
             <p style={{fontSize: '15px', marginBottom: '1px'}}>{nickname}</p>
-            <p style={{fontSize: '12px', marginBottom: '0.5px'}}>{department}</p>
+            <p style={{fontSize: '12px', marginBottom: '0.5px'}}>{department} {student_id}학번</p>
             <p style={{fontSize: '12px', marginTop: '0.5px'}}>전공 평점 : {department_score}</p>
             </div>
             <button

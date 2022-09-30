@@ -3,13 +3,7 @@ import axios from 'axios';
 
 // export const getTest = () => getAxios('/test');
 
-export function getTest() {
-    axios.get('/')
-  }
-
-//   export function getTest() {
-//     axios.get('/test')
-//          .then(res => {
-//            console.log(res.data)
-//          })
-//   }
+async function testFunction () {
+  const response = await axios.get('http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/test');
+  console.log(response)
+};

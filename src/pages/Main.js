@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import MainBeforeLogin from "../components/Main/MainBeforeLogin";
 import MainAfterLogin from "../components/Main/MainAfterLogin";
-import ChooseStudent from "./ChooseStudent";
+import ChooseStudent from "./Recruit";
 import { useAuth } from "../Context/auth/auth";
 
 const Main = () => {
