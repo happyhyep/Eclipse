@@ -85,7 +85,7 @@
 pull request 포함 문의사항은 [📧contact](#contact) 으로 연락 부탁드립니다.
 
 # License
-'FOCUZ 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
+'Eclipse 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
 자세한 내용은 ```LICENSE.txt```를 참고해주십시오.
 
 Copyright 2022. khuthon-1921. All Rights Reserved.
