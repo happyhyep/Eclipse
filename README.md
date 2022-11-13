@@ -93,5 +93,3 @@ Copyright 2022. khuthon-1921. All Rights Reserved.
 # Contact
 - (front) 정혜인 | jhi2359@khu.ac.kr
 - (front) 이혜미 | gkj8963@khu.ac.kr
-- (back) 김시환 |
-- (back) 박선우 |
