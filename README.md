@@ -1,6 +1,6 @@
 <div align="center">
     <img src="https://user-images.githubusercontent.com/103382269/193438878-4630ae15-9f00-48f4-affb-8fb7e058a497.JPG" width="150">
-    <h3 align="center">Eclipse :: 대학생의 미래를 위한 메타버스</h3>
+    <h3 align="center">Eclipse :: 대학생의 진로 걱정 해결을 위한 </h3>
     <p align="center">2022 khuthon 참가 (주제 : 대학생의 메타버스)</p>
     <p align="center">2022.09.30 ~ 2022.10.01 (무박2일)</p>
 </div>
