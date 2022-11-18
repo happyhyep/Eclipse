@@ -1,14 +1,13 @@
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/103382269/193438878-4630ae15-9f00-48f4-affb-8fb7e058a497.JPG" width="150">
-    <h3 align="center">Eclipse :: 대학생의 진로 걱정 해결을 위한 웹서비스</h3>
-    <br>
-    <h4>구현 영상확인 :
-    <a href="https://youtu.be/FJvAidjVZ7g">유튜브 바로가기</a></h4>
+    <img src="https://user-images.githubusercontent.com/103382269/193438878-4630ae15-9f00-48f4-affb-8fb7e058a497.JPG" width="200">
+    <h2 align="center">Eclipse :: 대학생의 진로 걱정 해결을 위한 웹서비스</h2>
+    <h4><a href="https://youtu.be/FJvAidjVZ7g">데모 영상 youtube 바로가기</a></h4>
 </div>
 
 ### Contents
 
   <ol>
+    <li><a href="#-about-the-project">About The Project</a></li>
     <li><a href="#-main-feature">Main Feature</a></li> 
     <li><a href="#-page">Page</a></li> 
     <li><a href="#-architecture">Architecture</a></li>
@@ -17,21 +16,28 @@
     <li><a href="#-license">License</a></li>
     <li><a href="#-contact">Contact</a></li>
   </ol>
+  
+# 💨 About The Project
+### 🔊 진로 걱정에 잠못드는 대학생들을 위해!
 
+##### 코로나 19 이후 선-후배 관계의 단절로
+##### 진로에 대한 걱정이 많은 대학생들을 위해
+##### 🙌 Eclipse 웹서비스 🙌를 기획하였습니다 !
+<br>
 
 # 💨 Main Feature
-#### 홈
+#### ✔ 홈
 + 로그인
 + 유저 프로필 수정
 + 유저에게 온 알림 확인
 
-#### 시간표 추천 시스템
+#### ✔ 시간표 추천 시스템
 + 진로가 비슷한 선배의 프로필을 선택하면 현재 학기에 들으면 좋을 과목들을 추천해주는 시스템
 
-#### 교수님의 학습 지원 시스템
+#### ✔ 교수님의 학습 지원 시스템
 + 학생들의 학점, 대회 참가 및 수상이력 등을 통한 교수님들의 학업적 지원 시스템 (ex. 대학원, 학부연구생, 주기적 상담)
 
-#### 후원 시스템
+#### ✔ 후원 시스템
 +  (장학금보다 부담스럽지 않은) 학생의 프로필을 통해 소액부터 큰 금액까지 서로 후원 가능한 시스템 
 
 <br>
