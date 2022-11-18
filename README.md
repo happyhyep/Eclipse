@@ -1,8 +1,9 @@
 <div align="center">
     <img src="https://user-images.githubusercontent.com/103382269/193438878-4630ae15-9f00-48f4-affb-8fb7e058a497.JPG" width="150">
     <h3 align="center">Eclipse :: 대학생의 진로 걱정 해결을 위한 웹서비스</h3>
-    <p align="center">2022 khuthon 참가 (주제 : 대학생의 메타버스)</p>
-    <p align="center">2022.09.30 ~ 2022.10.01 (무박2일)</p>
+    <br>
+    <h4>구현 영상확인 :
+    <a href="https://youtu.be/FJvAidjVZ7g">유튜브 바로가기</a></h4>
 </div>
 
 ### Contents
@@ -10,9 +11,11 @@
   <ol>
     <li><a href="#-main-feature">Main Feature</a></li> 
     <li><a href="#-page">Page</a></li> 
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#-architecture">Architecture</a></li>
+    <li><a href="#-sw-festival">SW festival</a></li>
+    <li><a href="#-contributing">Contributing</a></li>
+    <li><a href="#-license">License</a></li>
+    <li><a href="#-contact">Contact</a></li>
   </ol>
 
 
@@ -23,7 +26,7 @@
 + 유저에게 온 알림 확인
 
 #### 시간표 추천 시스템
-+ 자신의 진로와 비슷한 선배의 시간표들을 보고 자신이 현재 학기에 들으면 좋을 것 같은 과목들을 추천해주는 시스템
++ 진로가 비슷한 선배의 프로필을 선택하면 현재 학기에 들으면 좋을 과목들을 추천해주는 시스템
 
 #### 교수님의 학습 지원 시스템
 + 학생들의 학점, 대회 참가 및 수상이력 등을 통한 교수님들의 학업적 지원 시스템 (ex. 대학원, 학부연구생, 주기적 상담)
@@ -70,7 +73,17 @@
 <img src="https://user-images.githubusercontent.com/103382269/193438817-8463d0f6-ccdb-4884-b83f-7acb4b3a69da.gif"></img>
 </div>
 
-# Contributing
+# 💨 Architecture
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/103382269/202694479-b27c795c-330c-45f0-8561-8bb7307e91e3.png" width="700"></img>
+</div>
+
+# 💨 SW festival
+<div align="center">
+<img src="https://user-images.githubusercontent.com/103382269/202694014-95edbee8-383b-48b0-972a-f124b6bbbf35.jpg" width="900"></img>
+</div>
+
+# 💨 Contributing
 프로젝트에 기여하고 싶으신 분들은 아래 절차를 따라주시기 바랍니다.
 ```
     1. 프로젝트 fork
@@ -84,12 +97,12 @@
 ```
 pull request 포함 문의사항은 [📧contact](#contact) 으로 연락 부탁드립니다.
 
-# License
+# 💨 License
 'Eclipse 웹페이지' 프로젝트는 MIT License에 따라 배포됩니다.
 자세한 내용은 ```LICENSE.txt```를 참고해주십시오.
 
 Copyright 2022. khuthon-1921. All Rights Reserved.
 
-# Contact
+# 💨 Contact
 - (front) 정혜인 | jhi2359@khu.ac.kr
 - (front) 이혜미 | gkj8963@khu.ac.kr
