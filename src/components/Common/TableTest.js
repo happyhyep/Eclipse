@@ -10,7 +10,7 @@ const TableTest = () => {
   useEffect(() => {
     axios
       .get(
-        "http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/time_table"
+        "http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080/time_table"
       )
       .then((r) => {
         setTimeTable(r.data);

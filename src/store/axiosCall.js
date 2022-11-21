@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getAxios = (endPoint, data = {}, config = {}) =>
     axios({
-        url: `http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080${endPoint}`,
+        url: `http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080${endPoint}`,
         method: 'get',
         withCredentials: true,
         data: data,
@@ -12,7 +12,7 @@ export const getAxios = (endPoint, data = {}, config = {}) =>
 
 export const postAxios = (endPoint, params = {}, config = {}) =>
     axios({
-        url: `http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080${endPoint}`,
+        url: `http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080${endPoint}`,
         method: 'POST',
         withCredentials: true,
         data: params,
@@ -21,7 +21,7 @@ export const postAxios = (endPoint, params = {}, config = {}) =>
 
 export const deleteAxios = (endPoint) =>
     axios({
-        url: `http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080${endPoint}`,
+        url: `http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080${endPoint}`,
         method: 'DELETE',
         withCredentials: true,
     });

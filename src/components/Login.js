@@ -22,7 +22,7 @@ const Login = (props) => {
              const formData = new FormData();
              formData.append("userid", loginId);
              formData.append("password",loginPw);        
-             axios.post("http://ec2-50-18-22-205.us-west-1.compute.amazonaws.com:8080/login", formData)
+             axios.post("http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080/login", formData)
              .then(function (response) {
                 console.log(response)
                 console.log('로그인');
