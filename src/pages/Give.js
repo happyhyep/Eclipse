@@ -14,7 +14,7 @@ const Recruit = () => {
 
   async function testFunction() {
     const response = await axios.get(
-      "http://ec2-54-176-111-176.us-west-1.compute.amazonaws.com:8080/test"
+      "http://ec2-54-176-96-77.us-west-1.compute.amazonaws.com:8080/test"
     );
     console.log(response);
   }
