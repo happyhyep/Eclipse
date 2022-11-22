@@ -1,3 +1,6 @@
+import cake from "../../Layout/img/cake.png";
+import calavera from "../../Layout/img/Calavera.png";
+
 export const tempProfessorData = [
   {
     //id,email,name,pr-,nick,motto : null

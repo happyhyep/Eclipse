@@ -5,8 +5,11 @@ import { Box } from "../components/Styled/Box";
 import StudentsProfile from "../components/Student/StudentsProfile";
 import { tempUser } from "../store/temp/tempUserData";
 import SelectTimetable from "../components/Student/SelectTimetable";
+import { useAuth } from "../Context/auth/auth";
+import { tempUser2 } from "../store/temp/tempUserData";
 const Timetable = () => {
-  const [allUserList, setAllUserList] = useState(tempUser);
+  const [allUserList, setAllUserList] = useState(tempUser2);
+  const auth = useAuth();
 
   // @ts-ignore
 
