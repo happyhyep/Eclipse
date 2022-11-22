@@ -16,7 +16,7 @@ const MainBeforeLogin = () => {
                 <Box style={{height: '200px', borderRadius: '15px'}}>
                     <div style={{fontSize: '15px'}}>로그인 후 서비스를 이용해봐!</div>
                     <div style={{fontSize: '50px'}}>[ Eclipse ]</div>
-                    <div style={{fontSize: '15px'}}>의미있는 대학생활을 위한 메타버스</div>
+                    <div style={{fontSize: '15px'}}>대학생의 진로 걱정 해결을 위한 웹서비스</div>
                     <Link to={"/login"}>
                         <button style={{fontSize: '20px', height:'35px', fontFamily: "Neo", color: 'black', borderRadius: '6px'}}>인포21로 로그인하기</button>
                     </Link>
