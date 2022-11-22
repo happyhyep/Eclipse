@@ -2,6 +2,7 @@
     <img src="https://user-images.githubusercontent.com/103382269/193438878-4630ae15-9f00-48f4-affb-8fb7e058a497.JPG" width="200">
     <h2 align="center">Eclipse :: 대학생의 진로 걱정 해결을 위한 웹서비스</h2>
     <h4><a href="https://youtu.be/FJvAidjVZ7g">데모 영상 youtube 바로가기</a></h4>
+    <h4><a href="http://ec2-54-176-96-77.us-west-1.compute.amazonaws.com:3000/">웹페이지 바로가기 (서버가 열려있을 때만 접속 가능합니다)</a></h4>
 </div>
 
 ### Contents
